@@ -1,0 +1,111 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #f2f2f2;
+}
+
+/*CSS for the input field*/
+select{
+    width:90%; 
+    padding:10px;
+    border : none;
+    outline : none;
+    font-size : 15px;
+}
+input[type = 'text']{
+    padding:10px;
+    width:90%;
+    font-size : 15px;
+    border : none;
+    outline : none;
+}
+input[type = "date"]{
+    padding:10px;
+    width:90%;
+    font-size : 15px;
+    border : none;
+    outline : none;
+}
+/*main_div is the div in between the page*/
+.main_div{
+    padding:1rem;
+    max-width:36vw;
+    height:auto;
+    top:2rem;
+    position: relative;
+    left : 32vw;
+    background-color: white;
+}
+.main_div_heading{
+    text-align: center;
+}
+.description{
+    max-width:100%;
+}
+.second_div{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.category{
+    max-width:50%;
+    flex:50%;
+}
+.date{
+    max-width:50%;
+    border-left: 1px;
+    border-color: #f2f2f2;
+    border-left-style: solid;
+    flex:50%;
+}
+.all_buttons{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+.add_task_button button{
+    padding: 0.8rem;
+    border:none;
+    color:white;
+    background-color: darkmagenta;
+}
+.delete_task_button button{
+    padding: 0.8rem;
+    border:none;
+    color:white;
+    background-color: darkred;
+}
+
+.tasks_added{
+    display: flex;
+    max-width:100%;
+
+}
+.checkbox_container{
+    flex:10%;
+    max-width:10%;
+    align-content: center;
+    align-items: center;
+    display: flex;
+}
+.details_container{
+    flex:90%;
+    max-width: 60%;
+}
+.details_container h4,h6,h5{
+    padding:0;
+    margin:0;
+}
+.category_container{
+    flex:30%;
+    max-width:30%;
+}
+.inside_category_container{
+    width: 80%;
+    height:80%;
+    background-color: darkmagenta;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

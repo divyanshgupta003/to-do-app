@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= title %>
+    </title>
+    <script src="https://use.fontawesome.com/33d52b7bbc.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- starting of the main div -->
+    <div class="main_div">
+        <h1 class="main_div_heading">TO-DO APP</h1>
+        <hr>
+
+        <!-- form for making a new to-do listitem -->
+        <form action="/add-list" method="POST">
+            <div class="desription">
+               <input type="text" name="description" placeholder="Desription" id="to_do_description">
+            </div>
+            <hr>
+            <div class="second_div">
+                <div class="category">
+                        <select name="category" onchange="checkValue(this.value)">
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="Cleaning">Cleaning</option>
+                                <option value="School">School</option>
+                                <option value="Other">Other</option>
+                              </select>
+                              <input type="text" name="category1" id="other_option" placeholder="What Other?" style="display: none;">
+                </div>
+                <div class="date">
+                    <input type="date" name="date" id="to_do_date">
+                </div>
+            </div>
+            <hr>
+            <div class="all_buttons">
+                <div class="add_task_button">
+                    <button type="submit"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
+                </div>
+        </form>
+        
+            </div>
+        
+        <!-- this is for sending the post request for deletion  -->
+            <form name="list_todo" action="/delete-list" , method="POST">
+                <div class="delete_task_button">
+                    <button type='submit'><i class="fa fa-times" aria-hidden="true"></i> Delete Task(s)</button>
+                </div>
+                <% for(i of list_list){ %>
+                    <hr>
+                <div class="tasks_added">
+                        <div class="checkbox_container">
+                        <input class="item_checkbox" type="checkbox" name="listItem" value="<%= i._id %>">
+                    </div>
+                    <div class="details_container">
+                        <h4><%= i.description %></h4>
+                        <h5><i class="fa fa-calendar" aria-hidden="true"></i><%= i.date %></h5>
+                    </div>
+                    <div class="category_container">
+                        <div class="inside_category_container">
+                            <h5><%= i.category %></h5>
+                        </div>
+                    </div>
+                </div>
+               <% } %>
+            </form>
+            
+            
+    </div>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>
