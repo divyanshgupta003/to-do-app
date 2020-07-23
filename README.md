@@ -1,3 +1,4 @@
+[![Run on Repl.it](https://repl.it/badge/github/divyanshgupta003/to-do-app)](https://repl.it/github/divyanshgupta003/to-do-app)
 # to-do-app
 A Complete To-Do App 
 Functionalities - * Add a new task
